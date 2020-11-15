@@ -1,1 +1,2 @@
+Линк до кодот каде што ние ги влечиме податоците од GoogleMaps:
 https://colab.research.google.com/drive/1MEr2UiyNYoVp9CcsEWCoPOrKOdisNrEx?usp=sharing
