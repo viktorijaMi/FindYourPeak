@@ -5,5 +5,5 @@ Contributors:
 
   - Teodora Spasovska
   - Jana Mitrovska
-  - Viktorija Mijalchevska
+  - Viktorija Mijalcheva
   - Mario Stojcevski
