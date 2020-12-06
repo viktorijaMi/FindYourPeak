@@ -13,26 +13,23 @@ export class ActivityComponent implements OnInit {
 
   ngOnInit(): void {
     this.activityList = [
-      '../../assets/imgs/activity/1.jpg',
-      '../../assets/imgs/activity/2.jpg',
-      '../../assets/imgs/activity/3.jpg',
-      '../../assets/imgs/activity/4.jpg',
-      '../../assets/imgs/activity/5.jpg',
-      '../../assets/imgs/activity/6.jpg',
-      '../../assets/imgs/activity/7.jpg',
-      '../../assets/imgs/activity/8.jpg',
-      '../../assets/imgs/activity/9.jpg',
-      '../../assets/imgs/activity/10.jpg',
-      '../../assets/imgs/activity/11.jpg',
-      '../../assets/imgs/activity/12.jpg',
-      '../../assets/imgs/activity/13.jpg',
-      '../../assets/imgs/activity/14.jpg',
-      '../../assets/imgs/activity/15.jpg',
-      '../../assets/imgs/activity/16.jpg',
-      '../../assets/imgs/activity/17.jpg',
-      '../../assets/imgs/activity/18.jpg',
-      '../../assets/imgs/activity/19.jpg',
-      '../../assets/imgs/activity/20.jpg',
+        '../../assets/imgs/mountains/babamountain.jpg',
+        '../../assets/imgs/mountains/desatmountain.jpg',
+        '../../assets/imgs/mountains/galichitsa.jpg',
+        '../../assets/imgs/mountains/jablanica.jpg',
+        '../../assets/imgs/mountains/korab.jpg',
+        '../../assets/imgs/mountains/kozjak.jpg',
+        '../../assets/imgs/mountains/kozuf.jpg',
+        '../../assets/imgs/mountains/ograzden.jpg',
+        '../../assets/imgs/mountains/osogovo.jpg',
+        '../../assets/imgs/mountains/plackovica.jpg',
+        '../../assets/imgs/mountains/sarmountains.jpg',
+        '../../assets/imgs/mountains/solunskaglava.jpg',
+        '../../assets/imgs/mountains/belasica.jfif',
+        '../../assets/imgs/mountains/popovashapka.jfif',
+        '../../assets/imgs/mountains/skopskacrnagora.jfif',
+        '../../assets/imgs/mountains/titovvrv.jfif',
+
     ];
   }
 
