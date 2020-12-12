@@ -24,7 +24,7 @@ public class DataHolder {
     public void init() throws FileNotFoundException {
 
         activities = new ArrayList<>();
-        File csvFile = new File("src/main/java/findyourpeak/database/csv_database.csv");
+        File csvFile = new File("src/main/java/findyourpeak/database/csv_database_pipe.csv");
         if(!csvFile.exists()) throw new FileNotFoundException("csvFile");
         BufferedReader reader;
         try {
@@ -53,7 +53,8 @@ public class DataHolder {
         String location = lineParts[4];
         String rating = lineParts[5];
         String numberReviews = lineParts[6];
-        String description = lineParts[7]; //TODO fix this
+        String description = lineParts[7]
+                .replace("|", ",");
         String imageUrl = lineParts[9];
 
         return new Activity(
