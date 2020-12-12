@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/")
 public class ActivityController {
@@ -18,18 +19,21 @@ public class ActivityController {
         this.activityRepository = activityRepository;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities")
     public List<Activity> getAllActivities() {
         return this.activityRepository
                 .findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/activities") //TODO this doesnt seem to work.
     public Activity addActivity(@RequestBody Activity activity) {
         return this.activityRepository
                 .save(activity);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities/{id}")
     public ResponseEntity<Activity> getActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
@@ -40,6 +44,7 @@ public class ActivityController {
         return ResponseEntity.ok(activity);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/activities/{id}")
     public ResponseEntity<Activity> deleteActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository

@@ -1,7 +1,8 @@
 <div>
   <div class="row">
     <div *ngFor="let act of activityList" class="col-md-3">
-      <img class="activity-image" src="{{act}}">
+      <p>{{act.title}}</p>
+      <img class="activity-image" src="{{act.imageUrl}}">
     </div>
   </div>
 </div>

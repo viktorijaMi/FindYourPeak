@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ColumnOneComponent} from './column-one.component';
+import { ColumnOneComponent } from './column-one.component';
 
 describe('ColumnOneComponent', () => {
   let component: ColumnOneComponent;

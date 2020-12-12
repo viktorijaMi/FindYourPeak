@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivityModel } from '../ActivityModel';
+import { ActivityService } from '../services/activity-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-activity',
@@ -7,31 +10,34 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ActivityComponent implements OnInit {
 
-  activityList: string[];
+  activityList: ActivityModel[];
 
-  constructor() {
+  constructor(
+    private activityService: ActivityService,
+    private router: Router) {
   }
 
   ngOnInit(): void {
-    this.activityList = [
-      '../../assets/imgs/mountains/babamountain.jpg',
-      '../../assets/imgs/mountains/desatmountain.jpg',
-      '../../assets/imgs/mountains/galichitsa.jpg',
-      '../../assets/imgs/mountains/jablanica.jpg',
-      '../../assets/imgs/mountains/korab.jpg',
-      '../../assets/imgs/mountains/kozjak.jpg',
-      '../../assets/imgs/mountains/kozuf.jpg',
-      '../../assets/imgs/mountains/ograzden.jpg',
-      '../../assets/imgs/mountains/osogovo.jpg',
-      '../../assets/imgs/mountains/plackovica.jpg',
-      '../../assets/imgs/mountains/sarmountains.jpg',
-      '../../assets/imgs/mountains/solunskaglava.jpg',
-      '../../assets/imgs/mountains/belasica.jfif',
-      '../../assets/imgs/mountains/popovashapka.jfif',
-      '../../assets/imgs/mountains/skopskacrnagora.jfif',
-      '../../assets/imgs/mountains/titovvrv.jfif',
+    this.getActivities();
+  }
 
-    ];
+  private getActivities() {
+      this.activityService.getActivityList()
+      .subscribe(data => {
+        this.activityList = data;
+      })
+  }
+
+  activityDetails(id: number) {
+    //TODO implement this
+  }
+
+  activityUpdate(id: number) {
+    //TODO implement this
+  }
+
+  deleteActivity(id: number) {
+    //TODO implement this
   }
 
 }
