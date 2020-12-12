@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="">
+    <img src="../../../../assets/imgs/header-ico.png"
+         width="30"
+         height="30"
+         class="d-inline-block align-top"
+         alt="FindYourPeak-logo"
+         loading="lazy">
+    FindYourPeak!
+  </a>
+
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['activity']">Activity</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['login']">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['register']">Register</a>
+      </li>
+      <!-- <li class="nav-item">
+          <a class="nav-link"
+          [routerLink]="['reset-password']">Reset password</a>
+      </li> -->
+    </ul>
+  </div>
+
+
+</nav>
