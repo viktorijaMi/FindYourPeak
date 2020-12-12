@@ -16,8 +16,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
-    RouterModule
+    RouterModule,
+    AuthRoutingModule
   ],
   exports: [
     LoginComponent,

@@ -1,0 +1,23 @@
+<div class="row">
+  <span class="col-md-8 font-weight-light text-center text-lg-left mt-4 mb-0">
+    <h1>Did you pack your backpack?</h1>
+  </span>
+  <button class="form-control btn btn-secondary col-md-1 mt-5" type="submit">Search</button>
+  <span class="col-md-3 mt-5">
+    <input 
+    class="form-control" 
+    type="text" 
+    (keyup)=getSearchValue($event)
+    name="searchActivity">
+  </span>
+
+  
+</div>
+<hr class="mt-2 mb-5">
+<div class="picture-container">
+  <div class="row">
+    <div *ngFor="let act of activityList" class="col-md-4">
+      <a [routerLink]="['']"><img class="activity-image" src="{{act.imageUrl}}"></a>
+    </div>
+  </div>
+</div>
