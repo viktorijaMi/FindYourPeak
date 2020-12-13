@@ -25,7 +25,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    public User(Long id, String firstName, String lastName, String username, String email) {
+    public User(String firstName, String lastName, String username, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

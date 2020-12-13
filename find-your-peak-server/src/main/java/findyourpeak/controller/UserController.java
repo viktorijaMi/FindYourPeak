@@ -31,4 +31,5 @@ public class UserController {
                 () -> new ResourceNotFoundException("#" + id + "user does not exist"));
         return ResponseEntity.ok(user);
     }
+
  }

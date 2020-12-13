@@ -27,7 +27,7 @@ public class ActivityController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @PostMapping("/activities") //TODO this doesnt seem to work.
+    @PostMapping("/activities/add") //TODO this doesnt seem to work.
     public Activity addActivity(@RequestBody Activity activity) {
         return this.activityRepository
                 .save(activity);

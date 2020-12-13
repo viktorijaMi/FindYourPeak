@@ -10,12 +10,14 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivityModule } from './activity/activity.module';
+import { ActivitiesComponent } from './api/activities/activities.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,
