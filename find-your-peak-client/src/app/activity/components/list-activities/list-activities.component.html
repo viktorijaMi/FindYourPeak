@@ -1,3 +1,4 @@
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 <div class="row">
   <span class="col-md-8 font-weight-light text-center text-lg-left mt-4 mb-0">
     <h1>Did you pack your backpack?</h1>
@@ -17,7 +18,7 @@
 <div class="picture-container">
   <div class="row">
     <div *ngFor="let act of activityList" class="col-md-4">
-      <a [routerLink]="['activity']"><img class="activity-image" src="{{act.imageUrl}}"></a>
+      <img (click)="onSelect(act)" class="activity-image" src="{{act.imageUrl}}">
     </div>
   </div>
 </div>

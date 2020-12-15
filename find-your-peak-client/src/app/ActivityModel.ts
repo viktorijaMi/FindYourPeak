@@ -1,4 +1,5 @@
 export class ActivityModel {
+    public id: number;
     public title: String;
     public latitude: String;
     public longitude: String;

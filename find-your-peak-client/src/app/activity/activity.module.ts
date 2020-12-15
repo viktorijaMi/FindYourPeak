@@ -6,6 +6,7 @@ import { AddActivityComponent } from './components/add-activity/add-activity.com
 import { DeleteActivityComponent } from './components/delete-activity/delete-activity.component';
 import { EditActivityComponent } from './components/edit-activity/edit-activity.component';
 import { RouterModule } from '@angular/router';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatSliderModule
   ],
   exports: [
     ListActivitiesComponent,

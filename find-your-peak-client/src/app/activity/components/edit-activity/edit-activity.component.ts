@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { ActivityModel } from 'src/app/ActivityModel';
 import { ActivityService } from '../../../services/activity-service/activity-service.service';
 
 @Component({
@@ -9,12 +10,23 @@ import { ActivityService } from '../../../services/activity-service/activity-ser
 })
 export class EditActivityComponent implements OnInit {
 
+  public activity: ActivityModel;
+
   constructor(
-    activatedRoute: ActivatedRoute,
-    activityService: ActivityService
+    private activatedRoute: ActivatedRoute,
+    private activityService: ActivityService
     ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    let id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.getActivityById(id);
+  }
+
+  getActivityById(id: number) {
+    this.activityService.getActivityById(id)
+      .subscribe(data => {
+        this.activity = data;
+      });
   }
 
 }

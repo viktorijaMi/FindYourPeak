@@ -21,6 +21,10 @@ export class ListActivitiesComponent implements OnInit {
     this.getActivities();
   }
 
+  onSelect(activity): void {
+    this.router.navigate(['/activity/details', activity.id]);
+  }
+
   private getActivities() {
       this.activityService.getActivityList()
       .subscribe(data => {
@@ -36,10 +40,6 @@ export class ListActivitiesComponent implements OnInit {
         return true;
       })
     })
-  }
-
-  activityDetails(id: number) {
-    //TODO implement this
   }
 
   activityUpdate(id: number) {

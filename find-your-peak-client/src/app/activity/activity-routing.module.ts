@@ -8,7 +8,7 @@ import { ListActivitiesComponent } from './components/list-activities/list-activ
 
 const routes: Routes = [
   { path: 'activity', component: ListActivitiesComponent },
-  { path: 'activity/edit/:id', component: EditActivityComponent },
+  { path: 'activity/details/:id', component: EditActivityComponent },
   { path: 'activity/delete/:id', component: DeleteActivityComponent },
   { path: 'activity/add', component: AddActivityComponent }
 ];
