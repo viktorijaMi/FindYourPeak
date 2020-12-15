@@ -1,34 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ActivityModule, ActivityRoutingModule } from './activity/index';
+import { AuthModule, AuthRoutingModule } from './auth/index';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ActivityModule } from './activity/activity.module';
-import { ActivitiesComponent } from './api/activities/activities.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ActivitiesComponent
+    HomeComponent
   ],
   imports: [
+    ActivityModule,
+    ActivityRoutingModule,
+    AuthModule,
+    AuthRoutingModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserModule,
     CommonModule,
-    AuthModule,
     RouterModule,
-    HttpClientModule,
-    ActivityModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

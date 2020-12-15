@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ActivityService } from '../../../services/activity-service/activity-service.service';
 
 @Component({
   selector: 'app-edit-activity',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditActivityComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    activatedRoute: ActivatedRoute,
+    activityService: ActivityService
+    ) { }
 
   ngOnInit(): void {
   }
