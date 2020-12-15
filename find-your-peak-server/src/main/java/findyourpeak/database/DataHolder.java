@@ -30,6 +30,9 @@ public class DataHolder {
         try {
             reader = new BufferedReader(new FileReader(csvFile));
             reader.lines().forEach( line -> {
+                if(line.split(",")[10].equals("false")){
+                    return;
+                }
                 Activity activity = getActivityFromLine(line);
                 if(activity != null) {
                     activities.add(activity);
