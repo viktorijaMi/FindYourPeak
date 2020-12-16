@@ -58,6 +58,17 @@ public class ActivityController {
 
 
     @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/activities/{type}")
+    public ResponseEntity<Activity> getActivityByType(@PathVariable String type){
+        Activity activity = this.activityRepository
+                .findActivityByType(TypeActivity.valueOf(type))
+                .orElseThrow(() ->
+                        new ResourceNotFoundException("#" + type + " activity not found"));
+        return ResponseEntity.ok(activity);
+    }
+
+
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities/{id}")
     public ResponseEntity<Activity> getActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
