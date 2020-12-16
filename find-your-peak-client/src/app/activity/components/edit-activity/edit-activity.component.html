@@ -1,3 +1,15 @@
-<p>edit-activity works! {{activity.latitude}}</p>
 
-<!--//TODO jana create this webpage-->
+<div class="container">
+    <div class="left">
+        <div class="text">
+        <h2>{{activity.title}}</h2>
+        <p class="description">{{activity.description}}</p><br>
+        <div style="text-align: center;" >Rating: {{activity.rating}}, Number of Reviews: {{activity.numberReviews}}</div>
+        </div>
+
+    </div>
+    <div class="right">
+        <img class="image" src="{{activity.imageUrl}}" >  
+    </div>
+</div>
+
