@@ -1,31 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ListActivitiesComponent } from './components/list-activities/list-activities.component';
-import { AddActivityComponent } from './components/add-activity/add-activity.component';
-import { DeleteActivityComponent } from './components/delete-activity/delete-activity.component';
 import { EditActivityComponent } from './components/edit-activity/edit-activity.component';
-import { RouterModule } from '@angular/router';
-import { MatSliderModule } from '@angular/material/slider';
+import { DeleteActivityComponent } from './components/delete-activity/delete-activity.component';
+import { DetailsActivityComponent } from './components/details-activity/details-activity.component';
+
 
 
 
 @NgModule({
   declarations: [
     ListActivitiesComponent,
-    AddActivityComponent,
     EditActivityComponent,
+    DetailsActivityComponent,
     DeleteActivityComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    MatSliderModule
+    FormsModule
   ],
   exports: [
     ListActivitiesComponent,
-    AddActivityComponent,
     EditActivityComponent,
+    DetailsActivityComponent,
     DeleteActivityComponent
   ]
 })

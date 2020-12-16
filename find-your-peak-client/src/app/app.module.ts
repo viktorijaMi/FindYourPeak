@@ -7,10 +7,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -26,11 +22,7 @@ import { MatSliderModule } from '@angular/material/slider';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    BrowserModule,
-    CommonModule,
-    RouterModule,
-    HttpClientModule,
-    MatSliderModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

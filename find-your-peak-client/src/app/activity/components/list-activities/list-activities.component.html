@@ -1,24 +1,29 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 <div class="row">
-  <span class="col-md-8 font-weight-light text-center text-lg-left mt-4 mb-0">
+  <span class="col-md-8 font-weight-light text-center text-lg-left mt-4">
     <h1>Did you pack your backpack?</h1>
   </span>
-  <button class="form-control btn btn-secondary col-md-1 mt-5" type="submit">Search</button>
+  <button class="form-control btn btn-warning col-md-1 mt-5" type="submit">Search</button>
   <span class="col-md-3 mt-5">
     <input 
     class="form-control" 
     type="text" 
+    placeholder="Type something..."
     (keyup)=getSearchValue($event)
     name="searchActivity">
   </span>
 
-  
+
 </div>
 <hr class="mt-2 mb-5">
 <div class="picture-container">
   <div class="row">
     <div *ngFor="let act of activityList" class="col-md-4">
-      <img (click)="onSelect(act)" class="activity-image" src="{{act.imageUrl}}">
+      <img (click)="onSelect(act)" 
+      class="activity-image" 
+      data-toggle="tooltip" 
+      data-placement="top" 
+      title="{{act.title}}"
+      src="{{act.imageUrl}}">
     </div>
   </div>
 </div>

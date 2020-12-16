@@ -17,22 +17,14 @@ export class ListActivitiesComponent implements OnInit {
     private router: Router) {
   }
 
-  ngOnInit(): void {
-    this.getActivities();
-  }
-
-  onSelect(activity): void {
-    this.router.navigate(['/activity/details', activity.id]);
-  }
-
   private getActivities() {
-      this.activityService.getActivityList()
-      .subscribe(data => {
-        this.activityList = data;
-      })
+        this.activityService.getActivityList()
+        .subscribe(data => {
+          this.activityList = data;
+        })
   }
 
-  public getActivitiesByText(searchTerm: String) {
+  private getActivitiesByText(searchTerm: String) {
     this.activityService.getActivityList()
     .subscribe(data => {
       this.activityList = data.filter(act => {
@@ -42,16 +34,17 @@ export class ListActivitiesComponent implements OnInit {
     })
   }
 
-  activityUpdate(id: number) {
-    //TODO implement this
+  ngOnInit(): void {
+    this.getActivities();
   }
 
-  deleteActivity(id: number) {
-    //TODO implement this
+  public onSelect(activity): void {
+    this.router.navigate(['/activity/details', activity.id]);
   }
 
-  getSearchValue(item) {
+  public getSearchValue(item) {
     if (item.target.text != null) {
+      console.log(item.target.text);
       this.getActivitiesByText(item.target.text);
     }
   }

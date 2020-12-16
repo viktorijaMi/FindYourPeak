@@ -27,10 +27,22 @@ public class ActivityController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @PostMapping("/activities/add") //TODO this doesnt seem to work.
-    public Activity addActivity(@RequestBody Activity activity) {
-        return this.activityRepository
-                .save(activity);
+    @PutMapping("/activities/save/{id}")
+    public ResponseEntity<Activity> addActivity(@PathVariable Long id, @RequestBody Activity act) {
+        Activity activity = this.activityRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("#" + id + " activity not found"));
+        activity.setTitle(act.getTitle());
+        activity.setLatitude(act.getLatitude());
+        activity.setLongitude(act.getLongitude());
+        activity.setType(act.getType());
+        activity.setDescription(act.getDescription());
+        activity.setLocation(act.getLocation());
+        activity.setRating(act.getRating());
+        activity.setNumberReviews(act.getNumberReviews());
+        activity.setImageUrl(act.getImageUrl());
+
+        Activity updatedActivity = this.activityRepository.save(activity);
+        return ResponseEntity.ok(updatedActivity);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
@@ -45,7 +57,7 @@ public class ActivityController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @PostMapping("/activities/{id}")
+    @DeleteMapping("/activities/delete/{id}")
     public ResponseEntity<Activity> deleteActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
                 .findById(id)

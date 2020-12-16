@@ -27,11 +27,11 @@ export class ActivityService {
   }
 
   updateActivity(id: number, activity: ActivityModel): Observable<Object> {
-    return this.httpClient.put(`${this.baseURL}/${id}`, activity);
+    return this.httpClient.put(`${this.baseURL}/save/${id}`, activity);
   }
 
   deleteActivity(id: number): Observable<Object> {
-    return this.httpClient.delete(`${this.baseURL}/${id}`);
+    return this.httpClient.delete(`${this.baseURL}/delete/${id}`);
   }
 
 }

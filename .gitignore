@@ -1,2 +1,3 @@
 node_modules
 application-prod.properties
+find-your-peak-server/src/main/resources/application-prod.properties

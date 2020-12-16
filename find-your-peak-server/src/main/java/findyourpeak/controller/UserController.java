@@ -28,7 +28,17 @@ public class UserController {
     @GetMapping("/users/{id}")
     public ResponseEntity<User> findUserById(@PathVariable Long id){
         User user = this.userRepository.findById(id).orElseThrow(
-                () -> new ResourceNotFoundException("#" + id + "user does not exist"));
+                () -> new ResourceNotFoundException
+                        ("UserDoesNotExist: " + id));
+        return ResponseEntity.ok(user);
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/users/{email}")
+    public ResponseEntity<User> findUserByEmail(@PathVariable String email){
+        User user = this.userRepository.findByEmail(email).orElseThrow(
+                () -> new ResourceNotFoundException
+                        ("UserDoesNotExit: " + email));
         return ResponseEntity.ok(user);
     }
 

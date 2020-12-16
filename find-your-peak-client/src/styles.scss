@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-//variables
+//Declared variables
 $borderRadius: 8px;
-//
+$darkBlue: #0D1634;
 
+//Navbar
+.bg-dark {
+  background-color: $darkBlue !important;
+}
+.jumbotron {
+  background-color: rgba($color: #f8f9fa, $alpha: 0.65);
+  border-radius: $borderRadius;
+}
+
+//General style
 body {
   font-family: 'Quicksand', sans-serif;
   background-image: url(../src/assets/imgs/wallpaper.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100% 1110px;
+  background-size: 100% 1200px;
 }
 
-.jumbotron {
-  background-color: rgba($color: #f8f9fa, $alpha: 0.75);
-  border-radius: $borderRadius;
+hr {
+  border-top: orange 1.5px solid;
 }
-
-.peak-images {
-  width: 250px;
-  height: 250px;
-}
-
-html, body { height: 100%; }
-//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

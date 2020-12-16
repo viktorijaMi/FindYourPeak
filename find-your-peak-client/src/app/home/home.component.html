@@ -4,8 +4,8 @@
     <div class="container">
       <h1 class="display-4 text-center">Join the FUN!</h1>
       <br>
-      <div class="row">
-        <div class="about-us">
+      <div class="row m-4">
+        <div class="col-md-12">
           <p class="lead">The beauty of nature doesn’t need to be hard to find. Our goal is simple - build the largest
             collection of
             hand-curated trail guides, so you can explore the outdoors with confidence. Anytime. Anywhere.
@@ -18,13 +18,10 @@
             a few clicks.
           </p>
         </div>
-
-        <div class='buttons'>
-          <button class="btn"><a style="color: white;" [routerLink]="['login']">Login</a></button>
-          <button class='btn1'><a style="color: white;" [routerLink]="['register']">Register Now</a></button>
-        </div>
-
-
+      </div>
+      <div class="d-flex justify-content-center">
+        <a [routerLink]="['login']"><button class="btn btn-lg btn-primary m-2 login-btn">Login</button></a>
+        <a [routerLink]="['register']"><button class="btn btn-lg btn-warning m-2 register-btn">Register Now</button></a>
       </div>
     </div>
   </div>
