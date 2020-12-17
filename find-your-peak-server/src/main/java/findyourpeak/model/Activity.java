@@ -19,10 +19,10 @@ public class Activity {
     private String title;
 
     @Column(name = "latitude")
-    private String latitude;
+    private Double latitude;
 
     @Column(name = "longitude")
-    private String longitude;
+    private Double longitude;
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
@@ -44,8 +44,8 @@ public class Activity {
     private String imageUrl;
 
     public Activity(String title,
-                    String latitude,
-                    String longitude,
+                    Double latitude,
+                    Double longitude,
                     String type,
                     String description,
                     String location,

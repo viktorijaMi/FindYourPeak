@@ -4,7 +4,8 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
-      "jquery"
+      "googlemaps",
+      "jquery"      
     ]
   },
   "files": [
@@ -13,5 +14,9 @@
   ],
   "include": [
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
   ]
 }

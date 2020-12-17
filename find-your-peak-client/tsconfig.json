@@ -8,6 +8,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
@@ -15,6 +16,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],"typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": ["googlemaps"],
+    "paths": { "@angular/*": ["node_modules/@angular/*"] },
   }
 }
+

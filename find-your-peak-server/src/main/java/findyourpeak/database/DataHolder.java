@@ -50,8 +50,8 @@ public class DataHolder {
             return null;
         }
         String title = lineParts[0];
-        String latitude = lineParts[1];
-        String longitude = lineParts[2];
+        Double latitude = Double.parseDouble(lineParts[1]);
+        Double longitude = Double.parseDouble(lineParts[2]);
         String type = lineParts[3];
         String location = lineParts[4];
         String rating = lineParts[5];
