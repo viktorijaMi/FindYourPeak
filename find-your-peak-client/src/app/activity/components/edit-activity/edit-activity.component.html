@@ -1,6 +1,7 @@
-<div class="col-md-6 offset-md-3 mt-4">
-    <h3> Update {{activity.title}} </h3>
-    <form (ngSubmit)="onSubmit()">
+<div class="col-md-8 mt-4">
+    <h3 class="ml-3"> Update {{activity.title}} </h3>
+    <hr class="mt-2">
+    <form class="col-md-7" (ngSubmit)="onSubmit()">
         
         <div class="form-group">
             <label> Title </label>
@@ -31,13 +32,11 @@
 
         <div class="form-group">
             <label> Type </label>
-
             <select type="text" 
                 class="form-control" 
                 [(ngModel)]="activity.type"
                 name="type"
                 id="type">
-        
                 <option value="MOUNTAIN_PEAK">Mountain</option>
                 <option value="LAKE">Lake</option>
                 <option value="TOURIST_ATTRACTION">Tourist Attraction</option>
@@ -45,9 +44,8 @@
             </select>
         </div>
 
-        <a (click)="onBack()" class="btn btn-warning m-2">Back</a>
-        <button type="submit" class="btn btn-primary m-2">Update</button>
+        <a (click)="onBack()" class="btn back-btn m-2">Back</a>
+        <button type="submit" class="btn update-btn m-2">Update</button>
 
     </form>
-    
 </div>

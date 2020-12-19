@@ -1,28 +1,19 @@
-
 <div>
     <h1 class="my-4">{{activity.title}}</h1>
+    <hr class="mt-2 mb-5">
     <div class="row">
         <div class="col-md-6">
             <h3>Read more about {{activity.title}}</h3>
-            <p>{{activity.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus amet illum velit aspernatur et dolorem dicta dolore suscipit maxime similique, alias, accusantium magnam ab commodi veniam, reiciendis perferendis labore excepturi.</p>
-            <h3>Project Details</h3>
-            <ul>
-              <li>Lorem Ipsum</li>
-              <li>Dolor Sit Amet</li>
-              <li>Consectetur</li>
-              <li>Adipiscing Elit</li>
-            </ul>
+            <p>{{activity.description}}</p>
+            <button (click)="updateActivity(activity)" class="btn update-btn m-2">Update</button>
+            <button (click)="deleteActivity(activity)" class="btn delete-btn m-2">Delete</button>
         </div>
-
         <div class="col-md-6">
             <img class="img-fluid" src="{{activity.imageUrl}}" alt="{{activity.title}}">
         </div>
-        
     </div>
-    <div #map id="map"></div>
-    <hr>
-    <button (click)="updateActivity(activity)" class="btn btn-primary m-2">Update</button>
-    <button (click)="deleteActivity(activity)" class="btn btn-danger m-2">Delete</button>
+    <hr class="mt-5 mb-3">
+    <div class="mb-5" #map id="map"></div>
 </div>
 
 

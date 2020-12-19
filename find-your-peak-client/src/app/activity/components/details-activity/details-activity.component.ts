@@ -26,8 +26,6 @@ export class DetailsActivityComponent implements OnInit, AfterViewInit {
     private activityService: ActivityService
     ) { }
 
-  
-
   private getActivityById(id: number) {
       this.activityService.getActivityById(id)
         .subscribe(data => {
@@ -35,18 +33,13 @@ export class DetailsActivityComponent implements OnInit, AfterViewInit {
         });
   }
 
-
   ngOnInit() {
     let id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     this.getActivityById(id);
   }
 
-
-
   ngAfterViewInit() {
     this.coordinates = new google.maps.LatLng(this.activity.latitude, this.activity.longitude);
-    console.log(this.activity.latitude)
-    console.log(this.activity.longitude)
     this.mapOptions = {
       center: this.coordinates,
       zoom: 8,
@@ -57,8 +50,6 @@ export class DetailsActivityComponent implements OnInit, AfterViewInit {
     });
     this.mapInitializer();
   }
-
-
 
   mapInitializer() {
     this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);

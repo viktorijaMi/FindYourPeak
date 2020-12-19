@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ListActivitiesComponent implements OnInit {
 
   activityList: ActivityModel[];
+  searchTerm: String;
 
   constructor(
     private activityService: ActivityService,
@@ -24,16 +25,6 @@ export class ListActivitiesComponent implements OnInit {
         })
   }
 
-  private getActivitiesByText(searchTerm: String) {
-    this.activityService.getActivityList()
-    .subscribe(data => {
-      this.activityList = data.filter(act => {
-        if(act.title === searchTerm)
-        return true;
-      })
-    })
-  }
-
   ngOnInit(): void {
     this.getActivities();
   }
@@ -42,11 +33,15 @@ export class ListActivitiesComponent implements OnInit {
     this.router.navigate(['/activity/details', activity.id]);
   }
 
-  public getSearchValue(item) {
-    if (item.target.text != null) {
-      console.log(item.target.text);
-      this.getActivitiesByText(item.target.text);
-    }
+  public searchActivity() {
+    this.activityList = this.activityList.filter(data => {
+      if(this.searchTerm == ""){
+        this.ngOnInit();
+      } else if(this.searchTerm != ""){
+        return data.title.toLocaleLowerCase().match(this.searchTerm.toLocaleLowerCase()) ||
+        data.type.toLocaleLowerCase().match(this.searchTerm.toLocaleLowerCase());
+      }
+    })
   }
 
 }

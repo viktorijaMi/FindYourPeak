@@ -1,8 +1,26 @@
+//Declared variables
+$darkBlue: #0D1634;
+
 .img-fluid { 
     border: 2px solid orange;
     border-radius: 4px;
 }
+
 #map {
     height: 500px;
     width: 100%;
+    border: 2px solid orange;
+    border-radius: 4px;
+}
+
+.update-btn {
+  color: white;
+  background-color: $darkBlue;
+  border-color: $darkBlue;
+}
+
+.delete-btn {
+  color: darkred;
+  background-color: orange;
+  border-color: orange;
 }

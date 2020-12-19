@@ -1,23 +1,55 @@
-//Declared variables
-$orange: orange;
-
-//Activity Images
-.activity-image {
-  margin: 15px;
-  width: 350px;
-  height: 350px;
-  border-radius: 4px;
-  border: 2px solid $orange;
-  cursor: pointer;
-}
-
 .btn-warning {
   color: white;
-  background-color: $orange;
-  border-color: $orange;
+  background-color: orange;
+  border-color: orange;
+}
+
+body {
+  display: flex;
+}
+
+button {
+  max-width: 40px;
 }
 
 .picture-container {
-  margin-left: -20px; //TODO this is terrible, find a bootstrap fix for this
+  width: 100%;
+
+  margin: auto;
+  padding: 0 1.5rem;
 }
 
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: .3rem;
+  grid-template-areas: 'img';
+}
+
+.image-gallery a {
+  width: auto;
+  height: 20rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid orange;
+  border-radius: 4px;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.image-gallery a i {
+  color: rgba(255,255,255, .6);
+  position: relative;
+  display: none;
+  z-index: 100;
+  padding: 1rem 3rem;
+  border: 2px solid rgba(255,255,255, .6);
+  border-radius: .4rem;
+  transition: opacity .5s;
+}

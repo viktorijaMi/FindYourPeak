@@ -4,7 +4,6 @@
 $borderRadius: 8px;
 $darkBlue: #0D1634;
 
-//Navbar
 .bg-dark {
   background-color: $darkBlue !important;
 }
@@ -13,7 +12,6 @@ $darkBlue: #0D1634;
   border-radius: $borderRadius;
 }
 
-//General style
 body {
   font-family: 'Quicksand', sans-serif;
   background-image: url(../src/assets/imgs/wallpaper.jpg);

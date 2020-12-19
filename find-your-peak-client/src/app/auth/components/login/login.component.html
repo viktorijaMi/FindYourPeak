@@ -1,41 +1,47 @@
-<div>
-  <h1 class='header' style="color: #202027;">Join the FUN!</h1>
-</div>
-<div class="card w-50 mt-4 mb-4" id="join-form">
-  <div class="card-header text-center">
-    <h3 style="color:white;">Login</h3>
+<div class="box">  
+  <div class="col-md-6 join-the-fun">
+    <h1>Join the FUN!</h1>
   </div>
-  <div class="row">
-    <div class="col-md-6 offset-md-3 mt-4 mb-4 text-center">
 
-      <form class="join-form">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            required
-            id="loginUsername"
-            placeholder="Enter username"
-          />
-        </div>
+  <div class="card w-50 mt-4 mb-4">
+    <div class="card-header text-center">
+      <h3>Login</h3>
+    </div>
 
-        <div class="form-group">
-          <input
-            type="password"
-            class="form-control"
-            required
-            id="loginPassword"
-            placeholder="Enter password"
-          />
-        </div>
+    <div> 
+      <div class="col-md-6 offset-md-3 mt-4 mb-4 text-center">
+        <form>
+          
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              required
+              id="loginUsername"
+              placeholder="Username"
+            />
+          </div>
 
-        <div class="form-group">
-          <a [routerLink]="['/reset-password']">Forgot Password</a>
-        </div>
-        <button type="submit" class="btn btn-success">
-          Login <i class="fas fa-sign-in-alt"></i>
-        </button>
-      </form>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              required
+              id="loginPassword"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="form-group">
+            <a [routerLink]="['/reset-password']">Forgot Password</a>
+          </div>
+
+          <button type="submit" class="btn login-btn">
+            Login <i class="fas fa-sign-in-alt"></i>
+          </button>
+
+        </form>
+      </div>
     </div>
   </div>
 </div>

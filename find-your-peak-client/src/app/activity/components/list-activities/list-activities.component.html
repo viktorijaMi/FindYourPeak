@@ -1,29 +1,36 @@
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
 <div class="row">
   <span class="col-md-8 font-weight-light text-center text-lg-left mt-4">
     <h1>Did you pack your backpack?</h1>
   </span>
-  <button class="form-control btn btn-warning col-md-1 mt-5" type="submit">Search</button>
-  <span class="col-md-3 mt-5">
-    <input 
-    class="form-control" 
-    type="text" 
-    placeholder="Type something..."
-    (keyup)=getSearchValue($event)
-    name="searchActivity">
-  </span>
-
-
+    <div class="col-md-4 mt-5">
+      <div class="input-group md-form form-sm form-2 pl-0">
+        <input 
+        class="form-control" 
+        type="text" 
+        placeholder="Search" 
+        [(ngModel)]="searchTerm"
+        (input)="searchActivity()"
+        aria-label="Search">
+        <div class="input-group-append">
+          <span class="input-group-text amber lighten-3" id="basic-text1">
+              <i class="fas fa-search text-grey" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+    </div>
 </div>
 <hr class="mt-2 mb-5">
 <div class="picture-container">
-  <div class="row">
-    <div *ngFor="let act of activityList" class="col-md-4">
-      <img (click)="onSelect(act)" 
-      class="activity-image" 
-      data-toggle="tooltip" 
-      data-placement="top" 
-      title="{{act.title}}"
-      src="{{act.imageUrl}}">
-    </div>
+  <div class="image-gallery">
+    <a *ngFor="let act of activityList"
+     (click)="onSelect(act)"
+     data-toggle="tooltip"
+     data-placement="top"
+     style="grid-area: img-'{{act.id}}'; background-image: url('{{act.imageUrl}}');"  
+     class="img-'{{act.id}}'">
+      <i class="icon ion-md-expand"></i>
+    </a>
   </div>
 </div>
