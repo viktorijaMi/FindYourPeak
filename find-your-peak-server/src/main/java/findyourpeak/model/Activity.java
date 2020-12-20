@@ -61,13 +61,27 @@ public class Activity {
         this.numberReviews = numberReviews;
         this.imageUrl = imageUrl;
 
-        switch (type) {
-            case "Mountain peak" -> this.type = TypeActivity.MOUNTAIN_PEAK;
-            case "Lake" -> this.type = TypeActivity.LAKE;
-            case "Waterfall" -> this.type = TypeActivity.WATERFALL;
-            case "Tourist attraction" -> this.type = TypeActivity.TOURIST_ATTRACTION;
-            default -> this.type = null;
+        if(type.equals("Mountain peak")) {
+            this.type = TypeActivity.MOUNTAIN_PEAK;
         }
+        else if(type.equals("Lake")) {
+            this.type = TypeActivity.LAKE;
+        }
+        else if(type.equals("Waterfall")) {
+            this.type = TypeActivity.WATERFALL;
+        }
+        else if(type.equals("Tourist attraction")) {
+            this.type = TypeActivity.TOURIST_ATTRACTION;
+        } else {
+            this.type = null;
+        }
+//        switch (type) {
+//            case "Mountain peak" -> this.type = TypeActivity.MOUNTAIN_PEAK;
+//            case "Lake" -> this.type = TypeActivity.LAKE;
+//            case "Waterfall" -> this.type = TypeActivity.WATERFALL;
+//            case "Tourist attraction" -> this.type = TypeActivity.TOURIST_ATTRACTION;
+//            default -> this.type = null;
+//        }
     }
 
 }
