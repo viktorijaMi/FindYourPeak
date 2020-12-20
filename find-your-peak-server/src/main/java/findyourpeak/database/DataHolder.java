@@ -24,7 +24,7 @@ public class DataHolder {
     public void init() throws FileNotFoundException {
 
         activities = new ArrayList<>();
-        File csvFile = new File("src/main/java/findyourpeak/database/csv_database_pipe.csv");
+        File csvFile = new File("src/main/java/findyourpeak/database/activityDatabase.csv");
         if(!csvFile.exists()) throw new FileNotFoundException("csvFile");
         BufferedReader reader;
         try {
