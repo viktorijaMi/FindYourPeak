@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserRepository userRepository;
@@ -19,13 +19,13 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/users")
+    @GetMapping("")
     public List<User> getAllUsers(){
         return this.userRepository.findAll();
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/users/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<User> findUserById(@PathVariable Long id){
         User user = this.userRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException
@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/users/{email}")
+    @GetMapping("/{email}")
     public ResponseEntity<User> findUserByEmail(@PathVariable String email){
         User user = this.userRepository.findByEmail(email).orElseThrow(
                 () -> new ResourceNotFoundException
