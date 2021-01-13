@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { AfterViewInit, ViewChild, ElementRef } from '@angular/core'
+
 
 @Component({
   selector: 'app-root',

@@ -33,7 +33,8 @@
               "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
               "node_modules/ionicons/dist/scss/ionicons.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@okta/okta-signin-widget/dist/css/okta-sign-in.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js"
