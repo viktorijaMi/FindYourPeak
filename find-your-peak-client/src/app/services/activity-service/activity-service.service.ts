@@ -10,12 +10,13 @@ import { ActivityModel } from '../../ActivityModel';
 })
 export class ActivityService {
 
-  private baseURL = "http://localhost:9090/api/activities"
+  private baseURL = "http://localhost:9090/api/activities";
+  private herokuUrl = "https://find-your-peak1.herokuapp.com/api/activities";
 
   constructor(private httpClient: HttpClient) { }
 
   getActivityList(): Observable<ActivityModel[]> {
-    return this.httpClient.get<ActivityModel[]>(`${this.baseURL}`);
+    return this.httpClient.get<ActivityModel[]>(`${this.herokuUrl}`);
   }
 
   addActivity(activity: ActivityModel): Observable<Object> {
