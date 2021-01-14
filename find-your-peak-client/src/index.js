@@ -1,8 +1,7 @@
 console.log('script loaded')
 
 async function getData(){
-    let url = `https://findyourpeak.herokuapp.com/activities`;
-    let resp = await fetch(url);
+    let resp = await fetch(`https://findyourpeak.herokuapp.com/`);
     return await resp.json();
 }
 
