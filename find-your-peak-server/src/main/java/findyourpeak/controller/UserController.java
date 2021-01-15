@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("https://findyourpeak.herokuapp.com/profile")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -18,13 +19,11 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("")
     public List<User> getAllUsers(){
         return this.userRepository.findAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{id}")
     public ResponseEntity<User> findUserById(@PathVariable Long id){
         User user = this.userRepository.findById(id).orElseThrow(
@@ -33,7 +32,6 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{email}")
     public ResponseEntity<User> findUserByEmail(@PathVariable String email){
         User user = this.userRepository.findByEmail(email).orElseThrow(

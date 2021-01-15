@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://findyourpeak.herokuapp.com")
 @RestController
 @RequestMapping("/api/")
 public class ActivityController {
@@ -20,14 +20,12 @@ public class ActivityController {
         this.activityRepository = activityRepository;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities")
     public List<Activity> getAllActivities() {
         return this.activityRepository
                 .findAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities/{id}")
     public ResponseEntity<Activity> getActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
@@ -38,7 +36,6 @@ public class ActivityController {
         return ResponseEntity.ok(activity);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/activities/type/{type}")
     public ResponseEntity<Activity> getActivityByType(@PathVariable String type){
         Activity activity = this.activityRepository
@@ -48,7 +45,6 @@ public class ActivityController {
         return ResponseEntity.ok(activity);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/activities/save/{id}")
     public ResponseEntity<Activity> addActivity(@PathVariable Long id, @RequestBody Activity act) {
         Activity activity = this.activityRepository.findById(id)
@@ -67,7 +63,6 @@ public class ActivityController {
         return ResponseEntity.ok(updatedActivity);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/activities/delete/{id}")
     public ResponseEntity<Activity> deleteActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
