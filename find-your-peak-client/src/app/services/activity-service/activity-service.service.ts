@@ -10,8 +10,8 @@ import { ActivityModel } from '../../ActivityModel';
 })
 export class ActivityService {
 
-  //private baseURL = "https://findyourpeak.herokuapp.com/api/activities";
-  private baseURL = 'http://localhost:9090/api/activities';
+  private baseURL = "https://findyourpeak.herokuapp.com/api/activities";
+  //private baseURL = 'http://localhost:9090/api/activities';
 
   constructor(private httpClient: HttpClient) { }
 
