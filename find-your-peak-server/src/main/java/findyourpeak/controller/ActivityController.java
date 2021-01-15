@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://findyourpeak1.herokuapp.com")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/")
 public class ActivityController {
@@ -26,7 +26,7 @@ public class ActivityController {
                 .findAll();
     }
 
-    @GetMapping("/activities/{id}")
+    @GetMapping("activities/{id}")
     public ResponseEntity<Activity> getActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
                 .findById(id)
@@ -36,7 +36,7 @@ public class ActivityController {
         return ResponseEntity.ok(activity);
     }
 
-    @GetMapping("/activities/type/{type}")
+    @GetMapping("activities/type/{type}")
     public ResponseEntity<Activity> getActivityByType(@PathVariable String type){
         Activity activity = this.activityRepository
                 .findActivityByType(TypeActivity.valueOf(type))
@@ -45,7 +45,7 @@ public class ActivityController {
         return ResponseEntity.ok(activity);
     }
 
-    @PutMapping("/activities/save/{id}")
+    @PutMapping("activities/save/{id}")
     public ResponseEntity<Activity> addActivity(@PathVariable Long id, @RequestBody Activity act) {
         Activity activity = this.activityRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("#" + id + " activity not found"));
@@ -63,7 +63,7 @@ public class ActivityController {
         return ResponseEntity.ok(updatedActivity);
     }
 
-    @DeleteMapping("/activities/delete/{id}")
+    @DeleteMapping("activities/delete/{id}")
     public ResponseEntity<Activity> deleteActivityById(@PathVariable Long id) {
         Activity activity = this.activityRepository
                 .findById(id)
