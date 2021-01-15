@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://findyourpeak.herokuapp.com")
+@CrossOrigin(origins = "https://findyourpeak1.herokuapp.com")
 @RestController
 @RequestMapping("/api/")
 public class ActivityController {
