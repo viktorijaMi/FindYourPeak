@@ -75,13 +75,6 @@ public class Activity {
         } else {
             this.type = null;
         }
-//        switch (type) {
-//            case "Mountain peak" -> this.type = TypeActivity.MOUNTAIN_PEAK;
-//            case "Lake" -> this.type = TypeActivity.LAKE;
-//            case "Waterfall" -> this.type = TypeActivity.WATERFALL;
-//            case "Tourist attraction" -> this.type = TypeActivity.TOURIST_ATTRACTION;
-//            default -> this.type = null;
-//        }
     }
 
 }
