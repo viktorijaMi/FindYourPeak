@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '../auth/index';
 
-
-
 @NgModule({
   declarations:
     [

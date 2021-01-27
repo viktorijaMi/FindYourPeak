@@ -7,9 +7,6 @@ import { ListActivitiesComponent } from './components/list-activities/list-activ
 import { EditActivityComponent } from './components/edit-activity/edit-activity.component';
 import { DetailsActivityComponent } from './components/details-activity/details-activity.component';
 
-
-
-
 @NgModule({
   declarations: [
     ListActivitiesComponent,

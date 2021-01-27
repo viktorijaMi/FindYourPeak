@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 import {
   OKTA_CONFIG,
@@ -21,12 +19,9 @@ const oktaConfig = Object.assign({
   }
 }, myAppConfig.oidc);
 
-
 const routes: Routes = [
   {path: 'login/callback', component: OktaCallbackComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'reset-password', component: ResetPasswordComponent}
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

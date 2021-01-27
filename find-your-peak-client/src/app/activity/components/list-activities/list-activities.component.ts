@@ -22,7 +22,6 @@ export class ListActivitiesComponent implements OnInit {
         this.activityService.getActivityList()
         .subscribe(data => {
           this.activityList = data;
-          console.log('Activities=' + JSON.stringify(data));
         })
   }
 

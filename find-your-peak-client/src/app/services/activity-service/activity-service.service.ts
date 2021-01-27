@@ -3,15 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ActivityModel } from '../../ActivityModel';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class ActivityService {
 
   private baseURL = "https://findyourpeak.herokuapp.com/api/activities";
-  //private baseURL = 'http://localhost:9090/api/activities';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'activity', component: ListActivitiesComponent },
   { path: 'activity/details/:id', component: DetailsActivityComponent },
   { path: 'activity/edit/:id', component: EditActivityComponent }
-  // { path: 'activity/add' /*insert new component*/ },
 ];
 
 @NgModule({

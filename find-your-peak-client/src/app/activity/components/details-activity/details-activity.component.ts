@@ -63,7 +63,6 @@ export class DetailsActivityComponent implements OnInit, AfterViewInit {
   public deleteActivity(activity) {
     this.activityService.deleteActivity(activity.id)
       .subscribe(data => {
-        console.log("Deleted" + data);
         this._location.back();
       },
       error => console.log(error));

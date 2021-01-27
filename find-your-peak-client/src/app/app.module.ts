@@ -8,14 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent
   ],
   imports: [
-
     ActivityModule,
     ActivityRoutingModule,
     AuthModule,
