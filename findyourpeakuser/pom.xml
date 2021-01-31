@@ -8,10 +8,10 @@
         <version>2.3.4.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>find-your-peak</groupId>
-    <artifactId>findyourpeak</artifactId>
+    <groupId>com</groupId>
+    <artifactId>findyourpeakuser</artifactId>
     <version>1.0.0</version>
-    <name>Find Your Peak</name>
+    <name>Find Your Peak USER</name>
     <description>Hiking app designed @ FINKI by students</description>
 
     <properties>
@@ -36,12 +36,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
